@@ -22,13 +22,13 @@ public class OneTest {
 
     @Test
     public void test3() {
-//        String os = System.getProperty("os.name").toLowerCase();
-//        if (os.contains("windows")) {
-//            System.setProperty("webdriver.chrome.driver", "src/main/resources/drivers/chromedriver88.exe");
-//        } else if (os.contains("linux")) {
-//            System.setProperty("webdriver.chrome.driver", "src/main/resources/drivers/chromedriverlinux");
-//        }
-        System.setProperty("webdriver.chrome.driver", "src/main/resources/drivers/chromedriverlinux");
+        String os = System.getProperty("os.name").toLowerCase();
+        if (os.contains("windows")) {
+            System.setProperty("webdriver.chrome.driver", "src/main/resources/drivers/chromedriver88.exe");
+        } else if (os.contains("linux")) {
+            System.setProperty("webdriver.chrome.driver", "src/main/resources/drivers/chromedriverlinux");
+        }
+//        System.setProperty("webdriver.chrome.driver", "src/main/resources/drivers/chromedriverlinux");
         WebDriver driver = new ChromeDriver();
         driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
         driver.get("https://www.google.com.ua/");
