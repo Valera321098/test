@@ -22,7 +22,7 @@ public class OneTest {
 
     @Test
     public void test3() {
-        System.setProperty("webdriver.chrome.driver", "src/main/resources/drivers/chromedriver_linux_88");
+        System.setProperty("webdriver.chrome.driver", "src/main/resources/drivers/chromedriverlinux88");
         WebDriver driver = new ChromeDriver();
         driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
         driver.get("https://www.google.com.ua/");
